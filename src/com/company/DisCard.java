@@ -20,14 +20,14 @@ public class DisCard {
         }
         else {
             Card onTop = DisCard.get(0);
-            if (onTop.numberCard == card.numberCard) {
+            if (onTop.numberCard.equals(card.numberCard)) {
 
                 card = validateEight(card);
                 this.DisCard.add(0, card);
 
 
 
-            } else if (onTop.shapeCard == card.shapeCard) {
+            } else if (onTop.shapeCard.equals(card.shapeCard)) {
 
                 this.DisCard.add(0, card);
 

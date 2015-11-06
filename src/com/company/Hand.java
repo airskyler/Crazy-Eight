@@ -27,7 +27,7 @@ public class Hand {
             Scanner scanner = new Scanner(System.in);
 
 
-            //Todo: add validation so that choice can't return number bigger than index
+
             for (Card j : cardsInHand) {
 
                 System.out.println(String.format("(Enter %d) --> %s", handCounter + 1, j.toString()));

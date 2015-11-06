@@ -52,7 +52,7 @@ public class Main {
             totalDisCard.showFirstCard();
             System.out.println("\nWhat you want to do?");
 
-            
+
             int choicePlayer;
             do {
                 System.out.println("1 - Play\n2 - Draw\n3 - Pass?");
@@ -73,7 +73,7 @@ public class Main {
                     play(humanPlayer, computerPlayer, totalDisCard, totalCards);
                 }
                 humanPlayer.hand.cardsInHand.remove(toDiscard);
-                //todo possibility to go back after wrong card is played plus don't discard wrong card
+
 
                 if(humanPlayer.hand.cardsInHand.size() == 1){
                     System.out.println("Hey computer... just to let you know, I only have one card in my hand!");
@@ -95,12 +95,12 @@ public class Main {
 
             System.out.println("Computer is Playing");
             for(Card k :computerPlayer.hand.cardsInHand ) {
-                if (k.numberCard == totalDisCard.DisCard.get(0).numberCard) {
+                if (k.numberCard.equals(totalDisCard.DisCard.get(0).numberCard)) {
                     totalDisCard.addDisCardHand(k);
                     computerPlayer.hand.cardsInHand.remove(k);
                     break;
 
-                } else if (k.shapeCard == totalDisCard.DisCard.get(0).shapeCard) {
+                } else if (k.shapeCard.equals(totalDisCard.DisCard.get(0).shapeCard)) {
                     totalDisCard.addDisCardHand(k);
                     computerPlayer.hand.cardsInHand.remove(k);
                     break;
