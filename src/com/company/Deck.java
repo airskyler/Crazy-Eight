@@ -3,9 +3,8 @@ package com.company;
 import java.util.ArrayList;
 import java.util. *;
 
-/**
- * Created by Jessy on 10/16/2015.
- */
+
+
 public class Deck {
 
     // Creating a String of array to store cards number and shape data
@@ -40,6 +39,9 @@ public class Deck {
         return c;
     }
 
+
+
+    //  method to draw a card from a deck
     public Card draw()
     {
         Card c = cards.get(0);

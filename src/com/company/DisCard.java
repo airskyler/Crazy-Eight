@@ -9,15 +9,22 @@ import java.util.Scanner;
  */
 public class DisCard {
 
+    // Creating a ArrayList called "DisCard" to store a discard pile data
     ArrayList<Card> DisCard = new ArrayList<>();
 
     Scanner scanner = new Scanner(System.in);
 
+
+    // If the discard pile is empty, it will add a card to the discard pile to start the game
     public void addDisCardHand(Card card) {
         if (DisCard.isEmpty()){
             card = validateEight(card);
             this.DisCard.add(card);
         }
+
+        //  if the number or suits of the card is equal to the discard's top card...
+        //  that card can be added to the discard pile for a discard
+        //   it also go threw a validateEight method
         else {
             Card onTop = DisCard.get(0);
             if (onTop.numberCard.equals(card.numberCard)) {
@@ -39,19 +46,16 @@ public class DisCard {
 
     }
 
+
+
+    //  displaying top card of the discard pile
     public void showFirstCard(){
         System.out.println(DisCard.get(0));
     }
 
-    public ArrayList<Card> toStockPile (){
-        ArrayList<Card> stack = new ArrayList<Card>();
 
-        for(int i = DisCard.size() -1; i >= 1; i--) {
-            stack.add(DisCard.remove(i));
-        }
-        return stack;
-    }
-
+    //  validateEight method... asking a user to pick a suit of choice to play,
+    //  if the user get a discard with number 8 on the card
     private Card validateEight(Card card){
         if (card.numberCard == "8") {
             System.out.println("You have a discard with card number 8 ,\n" +

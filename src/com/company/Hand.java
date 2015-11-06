@@ -9,13 +9,20 @@ import java.util.Scanner;
  */
 public class Hand {
 
+
+    // Creating a ArrayList called "cardsInHand" to store player's hand
     ArrayList<Card> cardsInHand = new ArrayList<Card>();
 
 
 
+    //  method to add the card to the player's hand
     public void addToHand(Card card){
         this.cardsInHand.add(card);
     }
+
+
+    // method to display the player's hand on console and asking to user to choose a card that user
+    // like to play for the game
 
     public int displayHand() {
 
@@ -38,6 +45,7 @@ public class Hand {
                     "Please enter the number for the card you like to play.");
             int choice = scanner.nextInt() - 1;
 
+            // Validation for user entry for the card to play
             if (choice < cardsInHand.size() && choice >= 0) {
 
 
